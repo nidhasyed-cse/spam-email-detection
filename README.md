@@ -33,3 +33,9 @@ This project focuses on detecting spam emails using Machine Learning techniques.
 ## 👩‍💻 Author
 
 **Nidha Fathima**
+
+
+
+## 📸 Application Screenshot
+
+![Spam Email Detection](screenshot.png)
