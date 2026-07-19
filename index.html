@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Email Spam Detection</title>
+</head>
+
+<body>
+
+<h1>Email Spam Detection</h1>
+
+<h3>Upload Dataset</h3>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="dataset" accept=".csv">
+    <button type="submit">Load Dataset</button>
+</form>
+
+<hr>
+
+{% if msg %}
+<h3 style="color:green;">
+{{ msg }}
+</h3>
+{% endif %}
+
+<form action="/predict" method="post">
+
+<textarea name="email"
+rows="8"
+cols="60"
+placeholder="Enter Email Message"></textarea>
+
+<br><br>
+
+<button type="submit">
+Detect
+</button>
+
+</form>
+
+{% if prediction %}
+<h2>
+Result : {{ prediction }}
+</h2>
+{% endif %}
+
+</body>
+</html>
